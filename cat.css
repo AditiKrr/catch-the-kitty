@@ -1,0 +1,43 @@
+body {
+    font-family:'Pixelify Sans';
+    text-align: center;
+    background-color: pink;
+    
+
+}
+#board{
+    width: 540px;
+    height:540px;
+    background-color: rgb(138, 225, 241);
+    margin: 0 auto;
+    display:flex;
+    flex-wrap:wrap;
+    border-radius: 25px;
+    border-color: black;
+    border: 3px solid;
+
+}
+
+
+
+#board div{
+    width:180px;
+    height:180px;
+    background-image: url("./cloud.png");
+    background-size:cover;
+    position: relative;
+    z-index: 10;
+    
+}
+#board div img{
+    width: 100px;
+    height:100px;
+    
+    position:absolute;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    
+}

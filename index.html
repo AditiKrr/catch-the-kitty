@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Pixelify Sans' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="icon2.png">
+    <title>Catch the kitty!</title>
+    <link rel="stylesheet" href="cat.css">
+    <script src="cat.js"></script>
+    <audio id="bgMusic" src="cute-music-26476.mp3" loop hidden></audio>
+
+    <script>
+  const audio = document.getElementById("bgMusic");
+
+  // Restore playback position if saved before
+  const savedTime = localStorage.getItem("audioTime");
+  if (savedTime) {
+    audio.currentTime = parseFloat(savedTime);
+  }
+
+  // Try to auto-play after user interaction
+  function startAudio() {
+    audio.play();
+    document.removeEventListener("click", startAudio);
+  }
+
+  // Attach once, wait for first user interaction
+  document.addEventListener("click", startAudio);
+
+
+</script>
+
+
+</head>
+<body>
+    <h1>Catch the kitty !</h1>
+    <h2 id="score">0</h2>
+    <!--3X3-->
+    <div id="board"></div>
+   
+
+
+    
+
+   
+    
+</body>
+</html>
